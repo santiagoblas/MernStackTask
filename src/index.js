@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const router  = require('./routes/tasks.routes');
+const {mongoose} = require('./database');
 const app = express();
 
 //#region SETTINGS ----------
