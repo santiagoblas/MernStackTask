@@ -1,7 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const router  = require('./routes/tasks.routes');
+const tasksRouter  = require('./routes/tasks.routes');
+const usersRouter  = require('./routes/users.routes');
 const {mongoose} = require('./database');
 const app = express();
 
@@ -15,7 +16,8 @@ app.use(express.json());
 //#endregion
 
 //#region ROUTES ------------
-app.use('/api/tasks', router);
+app.use('/api/tasks', tasksRouter);
+app.use('/api/users', usersRouter);
 //#endregion
 
 //#region STATIC FILES ------
